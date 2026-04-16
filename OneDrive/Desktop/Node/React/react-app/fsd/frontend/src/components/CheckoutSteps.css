@@ -1,0 +1,48 @@
+/* CheckoutSteps.css */
+.checkout-steps-nav {
+  background: white;
+  border-bottom: 1px solid #eee;
+}
+
+.checkout-steps {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  max-width: 600px;
+  margin: 0 auto;
+}
+
+.step-item {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 6px;
+  font-size: 0.85rem;
+}
+
+.step-link {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 6px;
+  color: var(--primary);
+  font-weight: 700;
+  text-decoration: none;
+}
+
+.step-disabled {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 6px;
+  color: #ccc;
+  font-weight: 500;
+}
+
+.step-divider {
+  flex: 1;
+  height: 2px;
+  background: #eee;
+  margin: 0 10px;
+  margin-bottom: 20px;
+}

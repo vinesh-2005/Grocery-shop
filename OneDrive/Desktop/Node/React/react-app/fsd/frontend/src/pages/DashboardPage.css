@@ -1,0 +1,174 @@
+.stats-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(240px, 1fr));
+  gap: 25px;
+}
+
+.stat-card {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 1.5rem;
+}
+
+.stat-title {
+  font-size: 0.9rem;
+  font-weight: 600;
+  color: var(--text-light);
+}
+
+.stat-value {
+  font-size: 1.8rem;
+  font-weight: 800;
+  margin: 5px 0;
+}
+
+.stat-icon {
+  width: 50px;
+  height: 50px;
+  border-radius: 12px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.charts-grid {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 30px;
+}
+
+.chart-header {
+  margin-bottom: 1.5rem;
+}
+
+.chart-header h3 {
+  font-size: 1.25rem;
+  font-weight: 700;
+  color: var(--primary-dark);
+}
+
+@media (max-width: 992px) {
+  .charts-grid {
+    grid-template-columns: 1fr;
+  }
+}
+
+/* Utilities used in Dashboard */
+.gap-1 { gap: 0.75rem; }
+.gap-2 { gap: 1.5rem; }
+.ml-auto { margin-left: auto; }
+.p-2 { padding: 1.5rem 2rem; }
+.mt-2 { margin-top: 2rem; }
+.sm-text { font-size: 0.85rem; color: #666; }
+
+/* Inventory Alert Section */
+.inventory-section {
+  display: flex;
+  flex-direction: column;
+  gap: 1.5rem;
+}
+
+.inventory-alert-card {
+  background: #fff8e1; /* Soft warning background */
+  border: 1px solid #ffe082;
+  box-shadow: var(--shadow-sm);
+  transition: var(--transition);
+  border-radius: var(--radius);
+}
+
+.inventory-alert-card:hover {
+  box-shadow: var(--shadow);
+  transform: translateY(-2px);
+}
+
+.inventory-alert-card .alert-icon {
+  background: #ffecb3;
+  padding: 12px;
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.inventory-alert-card h3 {
+  color: #f57c00;
+  font-size: 1.25rem;
+  font-weight: 700;
+  margin-bottom: 0.2rem;
+}
+
+.inventory-alert-card p {
+  color: #666;
+  font-size: 0.95rem;
+  margin: 0;
+}
+
+.inventory-alert-card .btn-primary {
+  font-weight: 700;
+  box-shadow: var(--shadow-sm);
+  padding: 0.75rem 1.5rem;
+}
+
+/* Orders Status Section */
+.orders-status-card {
+  background: var(--surface);
+  border: 1px solid #e0e0e0;
+  box-shadow: var(--shadow-sm);
+  border-radius: var(--radius);
+  transition: var(--transition);
+}
+
+.orders-status-card:hover {
+  box-shadow: var(--shadow);
+  transform: translateY(-2px);
+}
+
+.status-group {
+  background: var(--background);
+  padding: 1rem 1.25rem;
+  border-radius: var(--radius);
+  flex: 1;
+  margin-right: 1.5rem;
+  border: 1px solid #e8f5e9;
+}
+
+.status-group strong {
+  display: block;
+  font-size: 1.15rem;
+  color: var(--primary-dark);
+}
+
+.status-group p {
+  margin: 0;
+}
+
+.orders-status-card .btn-secondary {
+  border-width: 2px;
+  font-weight: 600;
+  padding: 0.75rem 1.5rem;
+}
+
+.orders-status-card .btn-secondary:hover {
+  background: var(--primary);
+  color: white;
+  border-color: var(--primary);
+}
+
+@media (max-width: 768px) {
+  .inventory-alert-card, .orders-status-card {
+    flex-direction: column;
+    align-items: flex-start;
+  }
+  .inventory-alert-card .btn-primary, .orders-status-card .btn-secondary {
+    margin-left: 0;
+    margin-top: 1rem;
+    width: 100%;
+    justify-content: center;
+  }
+  .status-group {
+    margin-right: 0;
+    margin-bottom: 1rem;
+    width: 100%;
+  }
+}

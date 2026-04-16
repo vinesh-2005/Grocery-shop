@@ -1,0 +1,124 @@
+/* Footer.css */
+.footer {
+  margin-top: 4rem;
+  background: rgba(255, 255, 255, 0.8);
+  backdrop-filter: blur(10px);
+  border-top: 1px solid rgba(46, 125, 50, 0.1);
+}
+
+.footer-top {
+  display: grid;
+  grid-template-columns: 2fr 1fr 1fr 1.5fr;
+  gap: 40px;
+}
+
+.footer-brand .logo {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  font-size: 1.4rem;
+  font-weight: 800;
+  color: var(--primary-dark);
+  text-decoration: none;
+}
+
+.footer-brand .logo span span {
+  color: var(--primary);
+}
+
+.footer-brand p {
+  color: var(--text-light);
+  line-height: 1.6;
+}
+
+.social-links a {
+  color: var(--text-light);
+  transition: var(--transition);
+}
+
+.social-links a:hover {
+  color: var(--primary);
+}
+
+.footer-links h4,
+.footer-newsletter h4 {
+  font-size: 1rem;
+  font-weight: 700;
+  color: var(--primary-dark);
+  margin-bottom: 1rem;
+}
+
+.footer-links ul {
+  list-style: none;
+  padding: 0;
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+}
+
+.footer-links ul li a {
+  color: var(--text-light);
+  text-decoration: none;
+  transition: var(--transition);
+}
+
+.footer-links ul li a:hover {
+  color: var(--primary);
+  padding-left: 5px;
+}
+
+.footer-newsletter p {
+  color: var(--text-light);
+  margin-bottom: 1rem;
+}
+
+.footer-features {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 20px;
+  border-top: 1px solid #eee;
+  border-bottom: 1px solid #eee;
+}
+
+.feature-item .icon {
+  color: var(--primary);
+}
+
+.feature-item h5 {
+  font-size: 0.95rem;
+  font-weight: 700;
+}
+
+.feature-item p {
+  font-size: 0.8rem;
+  color: var(--text-light);
+}
+
+.footer-bottom {
+  color: var(--text-light);
+  font-size: 0.9rem;
+}
+
+.footer-legal a {
+  color: var(--text-light);
+  text-decoration: none;
+}
+
+.footer-legal a:hover {
+  color: var(--primary);
+}
+
+@media (max-width: 992px) {
+  .footer-top {
+    grid-template-columns: 1fr 1fr;
+  }
+  .footer-features {
+    grid-template-columns: 1fr;
+  }
+}
+
+@media (max-width: 600px) {
+  .footer-top {
+    grid-template-columns: 1fr;
+  }
+}

@@ -1,0 +1,176 @@
+.tracker-page {
+    padding: 2rem 1rem;
+    min-height: 80vh;
+}
+
+.tracker-container {
+    max-width: 800px;
+    margin: 0 auto;
+    background: white;
+    border-radius: 1.5rem;
+    overflow: hidden;
+    box-shadow: 0 10px 30px rgba(0,0,0,0.08);
+    animation: slideUp 0.5s ease-out;
+}
+
+.map-container {
+    height: 350px;
+    background-color: #e2e8f0;
+    position: relative;
+    background-image: url('https://maps.wikimedia.org/osm-intl/12/1209/1539.png');
+    background-size: cover;
+    background-position: center;
+}
+
+.map-overlay {
+    position: absolute;
+    bottom: 20px;
+    left: 20px;
+    background: rgba(255, 255, 255, 0.95);
+    backdrop-filter: blur(5px);
+    padding: 0.8rem 1.5rem;
+    border-radius: 2rem;
+    display: flex;
+    align-items: center;
+    gap: 1rem;
+    box-shadow: 0 5px 20px rgba(0,0,0,0.15);
+    font-weight: bold;
+    color: var(--text-dark);
+}
+
+.map-overlay svg {
+    color: var(--primary);
+    animation: pulse 2s infinite;
+}
+
+.tracker-details {
+    padding: 2.5rem;
+}
+
+.driver-card {
+    display: flex;
+    align-items: center;
+    gap: 1.5rem;
+    padding: 1.5rem;
+    background: #f8fafc;
+    border-radius: 1rem;
+    border: 1px solid #e2e8f0;
+    margin-bottom: 2.5rem;
+}
+
+.driver-avatar {
+    width: 60px;
+    height: 60px;
+    background: var(--primary-light);
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    color: white;
+}
+
+.driver-info h3 {
+    margin: 0;
+    font-size: 1.3rem;
+    color: #1e293b;
+}
+
+.driver-info p {
+    margin: 4px 0 0 0;
+    color: #64748b;
+    font-size: 0.9rem;
+    display: flex;
+    align-items: center;
+    gap: 5px;
+}
+
+.contact-actions {
+    margin-left: auto;
+    display: flex;
+    gap: 0.8rem;
+}
+
+.icon-btn {
+    width: 45px;
+    height: 45px;
+    border-radius: 50%;
+    border: 1px solid #e2e8f0;
+    background: white;
+    box-shadow: 0 3px 10px rgba(0,0,0,0.05);
+    cursor: pointer;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    color: var(--primary);
+    transition: all 0.2s ease;
+}
+
+.icon-btn:hover {
+    background: var(--primary);
+    color: white;
+    border-color: var(--primary);
+    transform: translateY(-2px);
+}
+
+.delivery-timeline {
+    position: relative;
+    padding-left: 2.5rem;
+    margin-bottom: 2rem;
+}
+
+.delivery-timeline::before {
+    content: '';
+    position: absolute;
+    left: 11px;
+    top: 5px;
+    bottom: 5px;
+    width: 2px;
+    background: #e2e8f0;
+}
+
+.timeline-item {
+    position: relative;
+    margin-bottom: 2.5rem;
+}
+
+.timeline-item:last-child {
+    margin-bottom: 0;
+}
+
+.timeline-item::before {
+    content: '';
+    position: absolute;
+    left: -2.5rem;
+    top: 3px;
+    width: 24px;
+    height: 24px;
+    border-radius: 50%;
+    background: white;
+    border: 3px solid #cbd5e1;
+    z-index: 1;
+}
+
+.timeline-item.completed::before {
+    background: var(--primary);
+    border-color: var(--primary);
+    box-shadow: 0 0 0 4px rgba(46, 125, 50, 0.2);
+}
+
+.timeline-item.active::before {
+    background: white;
+    border-color: var(--primary);
+    border-width: 5px;
+    box-shadow: 0 0 0 4px rgba(46, 125, 50, 0.2);
+}
+
+.timeline-item h4 {
+    margin: 0 0 0.3rem 0;
+    font-size: 1.1rem;
+    color: #1e293b;
+}
+
+.timeline-item p {
+    margin: 0;
+    color: #64748b;
+    font-size: 0.95rem;
+}

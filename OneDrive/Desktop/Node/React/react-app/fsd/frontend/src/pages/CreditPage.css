@@ -1,0 +1,227 @@
+.credit-dashboard-grid {
+  display: grid;
+  grid-template-columns: 1fr 350px;
+  gap: 30px;
+  align-items: start;
+}
+
+.status-card {
+  padding: 2.5rem;
+  background: white;
+  border-radius: var(--radius);
+  box-shadow: var(--shadow-lg);
+  margin-bottom: 2rem;
+}
+
+.status-grid {
+  display: flex;
+  justify-content: space-between;
+  text-align: center;
+  margin-top: 1.5rem;
+}
+
+.status-item span {
+  font-size: 0.9rem;
+  color: var(--text-light);
+  font-weight: 500;
+}
+
+.status-item h2 {
+  font-size: 2rem;
+  font-weight: 800;
+  color: var(--primary-dark);
+}
+
+.text-error { color: var(--error); }
+.text-success { color: var(--success); }
+
+.credit-progress-container {
+  margin-top: 2rem;
+}
+
+.progress-bar {
+  width: 100%;
+  height: 10px;
+  background: #eee;
+  border-radius: 5px;
+  overflow: hidden;
+  margin-bottom: 0.5rem;
+}
+
+.progress-fill {
+  height: 100%;
+  transition: width 0.5s ease-in-out;
+}
+
+.history-card {
+  padding: 2rem;
+}
+
+.history-table {
+  width: 100%;
+  border-collapse: collapse;
+  margin-top: 1rem;
+}
+
+.history-table th {
+  text-align: left;
+  padding: 12px;
+  border-bottom: 2px solid #eee;
+  color: var(--text-light);
+}
+
+.history-table td {
+  padding: 12px;
+  border-bottom: 1px solid #eee;
+}
+
+.payment-form-card {
+  padding: 2rem;
+}
+
+.message-alert {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  padding: 1rem;
+  margin-bottom: 1.5rem;
+  font-weight: 600;
+}
+
+.error-msg {
+  background: #ffebee;
+  color: #c62828;
+}
+
+@media (max-width: 900px) {
+  .credit-dashboard-grid {
+    grid-template-columns: 1fr;
+  }
+}
+/* DashboardPage.css */
+.stats-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(240px, 1fr));
+  gap: 25px;
+}
+
+.stat-card {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 1.5rem;
+}
+
+.stat-title {
+  font-size: 0.9rem;
+  font-weight: 600;
+  color: var(--text-light);
+}
+
+.stat-value {
+  font-size: 1.8rem;
+  font-weight: 800;
+  margin: 5px 0;
+}
+
+.stat-icon {
+  width: 50px;
+  height: 50px;
+  border-radius: 12px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.charts-grid {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 30px;
+}
+
+.chart-header {
+  margin-bottom: 1.5rem;
+}
+
+.chart-header h3 {
+  font-size: 1.25rem;
+  font-weight: 700;
+  color: var(--primary-dark);
+}
+
+@media (max-width: 992px) {
+  .charts-grid {
+    grid-template-columns: 1fr;
+  }
+}
+
+/* AdminPages.css */
+.admin-table {
+  width: 100%;
+  border-collapse: collapse;
+}
+
+.admin-table th {
+  background: #f8f9fa;
+  padding: 15px;
+  text-align: left;
+  font-weight: 700;
+  color: var(--primary-dark);
+  border-bottom: 1px solid #eee;
+}
+
+.admin-table td {
+  padding: 15px;
+  border-bottom: 1px solid #eee;
+  vertical-align: middle;
+}
+
+.item-cell {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+}
+
+.item-cell img {
+  width: 40px;
+  height: 40px;
+  border-radius: 8px;
+}
+
+.stock-level {
+  font-weight: 700;
+  padding: 4px 10px;
+  border-radius: 15px;
+  background: #e8f5e9;
+  color: #2e7d32;
+}
+
+.stock-level.low-stock {
+  background: #ffebee;
+  color: #c62828;
+}
+
+.actions-cell {
+  display: flex;
+  gap: 10px;
+}
+
+.btn-edit, .btn-delete, .btn-view, .btn-success, .btn-info {
+  width: 32px;
+  height: 32px;
+  border-radius: 8px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  transition: var(--transition);
+}
+
+.btn-edit { background: #e3f2fd; color: #1565c0; }
+.btn-delete { background: #ffebee; color: #c62828; }
+.btn-view { background: #f5f5f5; color: #666; }
+.btn-success { background: #e8f5e9; color: #2e7d32; }
+.btn-info { background: #e3f2fd; color: #1565c0; }
+
+.btn-edit:hover, .btn-delete:hover, .btn-view:hover {
+  transform: scale(1.1);
+}
